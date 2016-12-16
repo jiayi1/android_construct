@@ -35,7 +35,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     }
 
     private void getData(){
-        HttpRequest.getInstence().get("http://mapi.test.wanduoduo.com/suid/scanStatistics", new GsonCallBack<ListTestModel>() {
+        HttpRequest.getInstence().get("url", new GsonCallBack<ListTestModel>() {
             @Override
             protected void success(ListTestModel baseRes) {
                 Log.i("info",baseRes.getData().size()+"");

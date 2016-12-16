@@ -1,0 +1,10 @@
+logger
+json解析:json 、fastjson.android
+logUtils
+database : ormlite 、 realm
+image :picasso、fresco(俩级内存缓存 + 一级磁盘缓存)
+
+http://mapi.test.wanduoduo.com/suid/scanStatistics
+
+
+LogUtls + fastjson.android + okhttp + picasso + ormsqlite(greendao) +

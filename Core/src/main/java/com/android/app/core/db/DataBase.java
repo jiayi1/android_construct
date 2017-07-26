@@ -3,7 +3,7 @@ package com.android.app.core.db;
 import android.content.ContentValues;
 import android.util.Log;
 
-import com.android.app.core.BaseApp;
+import com.android.app.core.App;
 
 import net.sqlcipher.Cursor;
 import net.sqlcipher.database.SQLiteDatabase;
@@ -32,8 +32,8 @@ public abstract class DataBase {
 
 
         public OpenDataBase() {
-            super(BaseApp.appContext, getDBName(), null, getVersion());
-            SQLiteDatabase.loadLibs(BaseApp.appContext);
+            super(App.appContext, getDBName(), null, getVersion());
+            SQLiteDatabase.loadLibs(App.appContext);
         }
 
         @Override

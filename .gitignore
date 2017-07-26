@@ -2,4 +2,6 @@
 /.gradle
 /.idea
 /gradle
-/android_construce.iml
+/android_construct.iml
+javalib
+zxing

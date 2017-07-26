@@ -4,9 +4,28 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.view.Window;
-
 /**
- * Created by yulong.liu on 2016/12/15.
+ *
+ *----------Dragon be here!----------/
+ * 　　 ┏┓　 ┏┓
+ * 　　┏┛┻━━━┛┻━┓
+ * 　　┃　　　　 ┃
+ * 　　┃　　 ━　 ┃
+ * 　　┃　┳┛　┗┳ ┃
+ * 　　┃　　　　　┃
+ * 　　┃　　 ┻　　┃
+ * 　　┃　　　　　┃
+ * 　　┗━┓　 　┏━┛
+ * 　　　┃　　 ┃神兽保佑
+ * 　　　┃　　 ┃代码无BUG！
+ * 　　　┃　　 ┗━━┓
+ * 　　　┃　　　　 ┣┓
+ * 　　　┃　　　　┏┛
+ * 　　　┗┓┓┏━┳┓┏┛
+ * 　　　 ┃┫┫ ┃┫┫
+ * 　　 　┗┻┛ ┗┻┛
+ *  ━━━━━━神兽出没━━━━━━by:coder-pig
+* Created by yulong.liu on 2016/12/15.
  */
 
 public abstract class BaseActivity extends FragmentActivity  {

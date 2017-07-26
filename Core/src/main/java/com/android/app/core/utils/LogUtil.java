@@ -32,4 +32,9 @@ public class LogUtil {
             Log.i(tag,""+msg);
         }
     }
+    public static void v(@NonNull String tag, @NonNull String msg){
+        if(isLog){
+            Log.v(tag,msg);
+        }
+    }
 }

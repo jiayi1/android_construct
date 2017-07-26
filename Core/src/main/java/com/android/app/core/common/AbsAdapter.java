@@ -4,49 +4,63 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Vector;
 
 /**
  * Created by yulong.liu on 2016/12/15.
  */
 
-public class AbsAdapter extends BaseAdapter {
+public abstract class AbsAdapter<T> extends BaseAdapter {
 
-    protected List<Object> mList  = new ArrayList<Object>();
+    protected Vector<T> mContent = new Vector<T>();
 
-    public void setDataList(List<Object> dataList ){
+    public void setDataList(Vector<T> dataList) {
         checkListIsNull();
-        mList.clear();
-        mList.addAll(dataList);
+        mContent.clear();
+        if(dataList!= null){
+            mContent.addAll(dataList);
+            notifyDataSetChanged();
+        }
+
     }
 
-    private void checkListIsNull(){
-        if(mList == null){
-            mList = new ArrayList<Object>();
+    public void addContent(Vector<T> addList){
+        checkListIsNull();
+        if (addList != null) {
+            mContent.addAll(addList);
         }
+    }
+    private void checkListIsNull() {
+        if (mContent == null) {
+            mContent = new Vector<T>();
+        }
+    }
+
+    public Vector<T> getContent(){
+        return mContent;
     }
 
     @Override
     public int getCount() {
-        if(mList != null){
-            return mList.size();
+        if (mContent != null) {
+            return mContent.size();
         }
         return 0;
     }
 
     @Override
     public Object getItem(int i) {
+        if (mContent != null) {
+            return mContent.get(i);
+        }
         return null;
     }
 
     @Override
     public long getItemId(int i) {
-        return 0;
+        return i;
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        return null;
-    }
+    public abstract View getView(int position, View convertView, ViewGroup parent);
 }

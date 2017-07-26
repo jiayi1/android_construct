@@ -27,19 +27,19 @@ public class Envi {
      * 初始化app信息
      */
     public static void initAppParmas(){
-        DisplayMetrics dm = BaseApp.appContext.getResources().getDisplayMetrics();
+        DisplayMetrics dm = App.appContext.getResources().getDisplayMetrics();
         APP_HEIGHT = dm.heightPixels;
         APP_WIDTH = dm.widthPixels;
         APP_DENSITY = dm.density;
         try {
-            PackageManager manager = BaseApp.appContext.getPackageManager();
-            PackageInfo info =  manager.getPackageInfo(BaseApp.appContext.getPackageName(),0);
+            PackageManager manager = App.appContext.getPackageManager();
+            PackageInfo info =  manager.getPackageInfo(App.appContext.getPackageName(),0);
             APP_VERSION_CODE = info.versionCode;
             APP_VERSION_NAME = info.versionName;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
-        TelephonyManager telephonyManager = (TelephonyManager) BaseApp.appContext.getSystemService(Context.TELEPHONY_SERVICE);
+        TelephonyManager telephonyManager = (TelephonyManager) App.appContext.getSystemService(Context.TELEPHONY_SERVICE);
         if(!TextUtils.isEmpty(APP_DEVICEID)){
             APP_DEVICEID = telephonyManager.getDeviceId();
         }else {
